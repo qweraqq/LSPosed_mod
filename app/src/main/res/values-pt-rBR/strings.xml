@@ -161,7 +161,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">Ver na Play Store</string>
     <string name="module_app_info">Informações do app</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nNada encontrado</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nNada encontrado</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Framework</string>
     <string name="settings_disable_verbose_log">Desativar registros detalhados</string>

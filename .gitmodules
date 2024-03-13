@@ -3,13 +3,16 @@
 	url = https://github.com/mywalkb/XposedService.git
 [submodule "external/lsplant"]
 	path = external/lsplant
-	url = https://github.com/mywalkb/LSPlant_mod.git
+	url = https://github.com/pumPCin/LSPlant.git
+	branch = master
 [submodule "external/dobby"]
 	path = external/dobby
-	url = https://github.com/LSPosed/Dobby.git
+	url = https://github.com/pumPCin/Dobby.git
+	branch = master
 [submodule "external/fmt"]
 	path = external/fmt
 	url = https://github.com/fmtlib/fmt.git
 [submodule "external/cxx"]
 	path = external/cxx
-	url = https://github.com/topjohnwu/libcxx.git
+	url = https://github.com/pumPCin/libcxx.git
+	branch = master

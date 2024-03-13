@@ -161,7 +161,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">Bekyk in \'n ander toepassing</string>
     <string name="module_app_info">App inligting</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nNiks hier nie</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nNiks hier nie</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Raamwerk</string>
     <string name="settings_disable_verbose_log">Deaktiveer verbose logs</string>

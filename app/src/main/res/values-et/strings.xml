@@ -161,7 +161,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">Vaadake teises rakenduses</string>
     <string name="module_app_info">Rakenduse teave</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nSiin pole midagi.</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nSiin pole midagi.</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Raamistik</string>
     <string name="settings_disable_verbose_log">Lülita sõnalised logid välja</string>

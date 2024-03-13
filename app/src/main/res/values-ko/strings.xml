@@ -161,7 +161,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">다른 앱으로 보기</string>
     <string name="module_app_info">앱 정보</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\n아무것도 없음</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\n아무것도 없음</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">프레임워크</string>
     <string name="settings_disable_verbose_log">상세한 로그 비활성화</string>

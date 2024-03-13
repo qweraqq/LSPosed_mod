@@ -161,7 +161,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">Преглед в друго приложение</string>
     <string name="module_app_info">Информация за приложението</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nНищо тук</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nНищо тук</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Рамка</string>
     <string name="settings_disable_verbose_log">Деактивиране на вербалните дневници</string>

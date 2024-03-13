@@ -161,7 +161,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">دوسری ایپ میں دیکھیں</string>
     <string name="module_app_info">ایپ کی معلومات</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nیہاں کچھ نہیں ہے۔</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nیہاں کچھ نہیں ہے۔</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">فریم ورک</string>
     <string name="settings_disable_verbose_log">وربوز لاگز کو غیر فعال کریں۔</string>

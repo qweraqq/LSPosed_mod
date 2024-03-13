@@ -161,7 +161,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">Di sepana din de bibînin</string>
     <string name="module_app_info">Agahdariya Appê</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nLi vir tiştek tune</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nLi vir tiştek tune</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Çarçove</string>
     <string name="settings_disable_verbose_log">Têketinên devkî neçalak bike</string>

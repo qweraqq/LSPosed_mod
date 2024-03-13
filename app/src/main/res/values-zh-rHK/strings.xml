@@ -157,7 +157,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">在其他應用程式中檢視</string>
     <string name="module_app_info">應用程式資訊</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\n這裡甚麼都沒有</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\n這裡甚麼都沒有</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">框架</string>
     <string name="settings_disable_verbose_log">禁用詳細紀錄檔</string>

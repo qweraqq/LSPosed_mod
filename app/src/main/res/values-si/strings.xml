@@ -161,7 +161,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">වෙනත් යෙදුමක බලන්න</string>
     <string name="module_app_info">යෙදුම් තොරතුරු</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nමෙහි කිසිවක් නැත</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nමෙහි කිසිවක් නැත</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">රාමුව</string>
     <string name="settings_disable_verbose_log">වාචික ලඝු-සටහන් අක්‍රීය කරන්න</string>

@@ -164,7 +164,7 @@ JJ108</string>
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">In anderer App anzeigen</string>
     <string name="module_app_info">App-Information</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nNichts hier</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nNichts hier</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Framework</string>
     <string name="settings_disable_verbose_log">Ausführliche Protokolle deaktivieren</string>
