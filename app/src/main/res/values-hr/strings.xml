@@ -163,7 +163,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">Pogledaj u drugoj aplikaciji</string>
     <string name="module_app_info">Informacije o aplikaciji</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nOvdje nema ničega</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nOvdje nema ničega</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Framework</string>
     <string name="settings_disable_verbose_log">Onemogući opširne zapise</string>

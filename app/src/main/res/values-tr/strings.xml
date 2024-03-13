@@ -161,7 +161,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">Diğer uygulamada görüntüle</string>
     <string name="module_app_info">Uygulama bilgisi</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nModül bulunamadı</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nModül bulunamadı</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Çerçeve</string>
     <string name="settings_disable_verbose_log">Ayrıntılı günlükleri devre dışı bırak</string>

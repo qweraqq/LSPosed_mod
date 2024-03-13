@@ -161,7 +161,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">Veure en una altra aplicació</string>
     <string name="module_app_info">Informació de l\'aplicació</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nAquí no hi ha res</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nAquí no hi ha res</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Marc</string>
     <string name="settings_disable_verbose_log">Desactiva els registres detallats</string>

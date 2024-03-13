@@ -169,7 +169,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">عرض في تطبيق آخر</string>
     <string name="module_app_info">معلومات التطبيق</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\n لا شيء هنا</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\n لا شيء هنا</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">إطار العمل</string>
     <string name="settings_disable_verbose_log">تعطيل السجلات المفصّلة</string>

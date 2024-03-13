@@ -161,7 +161,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">在其它应用中查看</string>
     <string name="module_app_info">应用信息</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\n空空如也</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\n空空如也</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">框架</string>
     <string name="settings_disable_verbose_log">禁用详细日志</string>

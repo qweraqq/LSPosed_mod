@@ -161,7 +161,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">অন্য অ্যাপে দেখুন</string>
     <string name="module_app_info">অ্যাপের তথ্য</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nএখানে কিছুই নেই</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nএখানে কিছুই নেই</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">ফ্রেমওয়ার্ক</string>
     <string name="settings_disable_verbose_log">ভার্বোস লগ অক্ষম করুন</string>

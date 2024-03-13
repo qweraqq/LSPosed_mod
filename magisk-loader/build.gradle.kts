@@ -161,7 +161,7 @@ fun afterEval() = android.applicationVariants.forEach { variant ->
                 "versionName" to "v$verName",
                 "versionCode" to verCode,
                 "authorList" to authors,
-                "updateJson" to "https://mywalkb.github.io/LSPosed_mod/release/${flavorLowered}.json",
+                "updateJson" to "https://raw.githubusercontent.com/pumPCin_mod/LSPosed/master/${flavorLowered}.json",
                 "requirement" to when (flavorLowered) {
                     "riru" -> "Requires Riru $moduleMinRiruVersionName or above installed"
                     "zygisk" -> "Requires Magisk 24.0+ and Zygisk enabled"

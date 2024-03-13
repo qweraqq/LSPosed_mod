@@ -162,7 +162,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">Megtekintés más alkalmazásban</string>
     <string name="module_app_info">Alkalmazás információ</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nItt nincs semmi</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nItt nincs semmi</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Keretrendszer</string>
     <string name="settings_disable_verbose_log">A szöveges naplózás kikapcsolása</string>

@@ -161,7 +161,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">अन्य ऐप में देखें</string>
     <string name="module_app_info">अनुप्रयोग की जानकारी</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nयहाँ कुछ भी नहीं</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nयहाँ कुछ भी नहीं</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">रूपरेखा</string>
     <string name="settings_disable_verbose_log">वर्बोज़ लॉग अक्षम करें</string>

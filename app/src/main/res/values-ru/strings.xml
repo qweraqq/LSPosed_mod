@@ -164,14 +164,20 @@
     <string name="menu_hide">Скрывать</string>
     <string name="deny_list">%s находится в DenyList и может не работать</string>
     <string name="deny_list_info">В DenyList</string>
+    <string name="menu_select">Выбрать</string>
+    <string name="menu_select_all">Все</string>
+    <string name="menu_select_none">Ничего</string>
+    <string name="menu_automatic_add">Автодобавление</string>
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">Магазин приложений</string>
     <string name="module_app_info">О приложении</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nЗдесь ничего нет</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nЗдесь ничего нет</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Фреймворк</string>
     <string name="settings_disable_verbose_log">Выключить подробные логи</string>
     <string name="settings_disable_verbose_log_summary">Выключение подробных логов</string>
+    <string name="settings_force_enable_log">Включить логи watchdog</string>
+    <string name="settings_force_enable_log_summary">Включение логов watchdog в LSPosed, некоторые приложения обнаруживают это и закрываются</string>
     <string name="pure_black_dark_theme">Черная тема</string>
     <string name="pure_black_dark_theme_summary">Использовать черную тему, когда включена темная тема</string>
     <string name="settings_group_theme">Тема</string>
@@ -207,6 +213,14 @@
     <string name="update_channel_nightly">Ночные версии</string>
     <string name="settings_xposed_api_call_protection">Защита использования Xposed API</string>
     <string name="settings_xposed_api_call_protection_summary">Блокировать динамически загружаемый код модуля для использования Xposed API, это может нарушить работу некоторых модулей, но повысит безопасность</string>
+    <string name="pref_title_restrict_classloader">Только classloader модуля может использовать Xposed API</string>
+    <string name="pref_summary_restrict_classloader">Это может нарушить работу некоторых модулей, но повысит безопасность (экспериментально)</string>
+    <string name="settings_group_cli">CLI</string>
+    <string name="pref_title_enable_cli">Включить CLI</string>
+    <string name="pref_summary_enable_cli">(экспериментально)</string>
+    <string name="timeout_session">Время сессии в минутах</string>
+    <string name="one_command">Одна команда</string>
+    <string name="disabled">Отключено</string>
     <!-- Module Repo -->
     <string name="module_readme">Описание</string>
     <string name="module_releases">Версии</string>

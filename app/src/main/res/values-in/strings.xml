@@ -159,7 +159,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">Lihat di aplikasi lain</string>
     <string name="module_app_info">Informasi aplikasi</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nTidak ada apa-apa di sini</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nTidak ada apa-apa di sini</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Kerangka kerja</string>
     <string name="settings_disable_verbose_log">Nonaktifkan log verbose</string>

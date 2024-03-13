@@ -165,7 +165,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">הצג באפליקציה אחרת</string>
     <string name="module_app_info">מידע על האפליקציה</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\n אין פה כלום</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\n אין פה כלום</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Framework</string>
     <string name="settings_disable_verbose_log">בטל verbose logs</string>

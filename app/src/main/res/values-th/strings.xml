@@ -160,7 +160,7 @@
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">ดูในแอปอื่น</string>
     <string name="module_app_info">ข้อมูลแอพ</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nไม่มีอะไรที่นี่</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nไม่มีอะไรที่นี่</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">กรอบ</string>
     <string name="settings_disable_verbose_log">ปิดใช้งานบันทึกอย่างละเอียด</string>

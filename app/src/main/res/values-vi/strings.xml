@@ -160,7 +160,7 @@ Nên gỡ cài đặt ứng dụng hiện tại.</string>
     <!-- ModulesActivity and AppListActivity -->
     <string name="modules_other_app">Xem trong ứng dụng khác</string>
     <string name="module_app_info">Thông tin ứng dụng</string>
-    <string name="list_empty">¯\\\\_(ツ)_\/¯\nKhông có gì ở đây cả</string>
+    <string name="list_empty">¯\\_(ツ)_/¯\nKhông có gì ở đây cả</string>
     <!-- SettingsActivity -->
     <string name="settings_group_framework">Khung hệ thống</string>
     <string name="settings_disable_verbose_log">Vô hiệu hoá nhật ký chi tiết</string>
