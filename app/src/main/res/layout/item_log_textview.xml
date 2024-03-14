@@ -16,7 +16,7 @@
   ~
   ~ Copyright (C) 2021 LSPosed Contributors
   -->
-<!--<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/log_item"
     style="@style/TextAppearance.AppCompat.Small"
     android:layout_width="wrap_content"
@@ -26,4 +26,4 @@
     android:hyphenationFrequency="fullFast"
     android:paddingHorizontal="@dimen/m3_appbar_expanded_title_margin_horizontal"
     android:textColor="?attr/colorOnSurface"
-    android:textSize="12sp" />-->
+    android:textSize="12sp" />
