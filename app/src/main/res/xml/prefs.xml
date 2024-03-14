@@ -40,11 +40,11 @@
             android:summary="%s"
             android:title="@string/settings_language" />
 
-        <Preference
+        <!--<Preference
             android:icon="@drawable/ic_outline_groups_24"
             android:key="translation_contributors"
             android:title="@string/settings_translation_contributors"
-            app:enableCopying="true" />
+            app:enableCopying="true" />-->
 
         <Preference
             android:icon="@drawable/ic_outline_translate_24"
@@ -83,7 +83,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/settings_group_framework">
-        <rikka.material.preference.MaterialSwitchPreference
+        <!--<rikka.material.preference.MaterialSwitchPreference
             android:defaultValue="false"
             android:icon="@drawable/ic_outline_assignment_24"
             android:key="disable_verbose_log"
@@ -97,7 +97,7 @@
             android:key="force_enable_log"
             android:persistent="false"
             android:summary="@string/settings_force_enable_log_summary"
-            android:title="@string/settings_force_enable_log" />
+            android:title="@string/settings_force_enable_log" />-->
 
         <rikka.material.preference.MaterialSwitchPreference
             android:defaultValue="true"
