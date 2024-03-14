@@ -95,8 +95,8 @@ public class ConfigManager {
 
     private final SQLiteDatabase db = openDb();
 
-    private boolean verboseLog = false;
-    private boolean logWatchdog = false;
+    private boolean verboseLog = false; //true;
+    private boolean logWatchdog = false; //true;
     private boolean dexObfuscate = true;
     private boolean enableStatusNotification = true;
     private boolean bEnableCli = false;
