@@ -44,12 +44,12 @@
             android:icon="@drawable/ic_outline_groups_24"
             android:key="translation_contributors"
             android:title="@string/settings_translation_contributors"
-            app:enableCopying="true" />-->
+            app:enableCopying="true" />
 
         <Preference
             android:icon="@drawable/ic_outline_translate_24"
             android:key="translation"
-            android:title="@string/settings_translation" />
+            android:title="@string/settings_translation" />-->
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/settings_group_theme">
@@ -124,14 +124,14 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/settings_group_repo">
-        <rikka.preference.SimpleMenuPreference
+        <!--<rikka.preference.SimpleMenuPreference
             android:defaultValue="CHANNEL_STABLE"
             android:entries="@array/update_channel_texts"
             android:entryValues="@array/update_channel_values"
             android:icon="@drawable/ic_outline_merge_type_24"
             android:key="update_channel"
             android:summary="%s"
-            android:title="@string/settings_update_channel" />
+            android:title="@string/settings_update_channel" />-->
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/settings_backup_and_restore">
