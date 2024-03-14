@@ -124,7 +124,7 @@ public class MainActivity extends BaseActivity implements RepoLoader.RepoListene
             if (!TextUtils.isEmpty(intent.getDataString())) {
                 switch (intent.getDataString()) {
                     case "modules" -> nav.setSelectedItemId(R.id.modules_nav);
-                    case "logs" -> nav.setSelectedItemId(R.id.logs_fragment);
+                    //case "logs" -> nav.setSelectedItemId(R.id.logs_fragment);
                     case "repo" -> {
                         if (ConfigManager.isMagiskInstalled()) {
                             nav.setSelectedItemId(R.id.repo_nav);
@@ -253,7 +253,7 @@ public class MainActivity extends BaseActivity implements RepoLoader.RepoListene
             }
 
             if (!ConfigManager.isBinderAlive()) {
-                nav.getMenu().removeItem(R.id.logs_fragment);
+                //nav.getMenu().removeItem(R.id.logs_fragment);
                 nav.getMenu().removeItem(R.id.modules_nav);
                 if (!ConfigManager.isMagiskInstalled()) {
                     nav.getMenu().removeItem(R.id.repo_nav);
