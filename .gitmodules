@@ -13,7 +13,7 @@
 [submodule "external/fmt"]
 	path = external/fmt
 	url = https://github.com/pumPCin/fmt.git
-	branch = LSPosed_mod
+	branch = master
 [submodule "external/cxx"]
 	path = external/cxx
 	url = https://github.com/pumPCin/libcxx.git
