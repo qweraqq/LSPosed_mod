@@ -389,6 +389,10 @@ bool ElfImg::findModuleBase() {
                 elf = line.substr(begin);
                 if (elf.back() == '\n') elf.pop_back();
                 LOGD("update path: {}", elf);
+                if (elf.starts_with("/android")) {
+                    elf.erase(0, 8);
+                    LOGD("removed /android prefix: {}", elf);
+                }
                 break;
             }
         }
