@@ -40,11 +40,11 @@
             android:summary="%s"
             android:title="@string/settings_language" />
 
-        <Preference
+        <!--<Preference
             android:icon="@drawable/ic_outline_groups_24"
             android:key="translation_contributors"
             android:title="@string/settings_translation_contributors"
-            app:enableCopying="true" />
+            app:enableCopying="true" />-->
 
         <Preference
             android:icon="@drawable/ic_outline_translate_24"

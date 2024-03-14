@@ -19,7 +19,7 @@
   -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
+    <!--<item
         android:id="@+id/menu_save"
         android:icon="@drawable/ic_save"
         android:showAsAction="ifRoom"
@@ -44,5 +44,5 @@
         android:id="@+id/menu_word_wrap"
         android:checkable="true"
         android:checked="false"
-        android:title="@string/menu_enable_word_wrap" />
+        android:title="@string/menu_enable_word_wrap" />-->
 </menu>
