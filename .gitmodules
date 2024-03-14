@@ -1,6 +1,7 @@
 [submodule "services/xposed-service"]
 	path = services/xposed-service
 	url = https://github.com/pumPCin/XposedService.git
+	branch = main
 [submodule "external/lsplant"]
 	path = external/lsplant
 	url = https://github.com/pumPCin/LSPlant.git
@@ -11,7 +12,8 @@
 	branch = master
 [submodule "external/fmt"]
 	path = external/fmt
-	url = https://github.com/fmtlib/fmt.git
+	url = https://github.com/pumPCin/fmt.git
+	branch = LSPosed_mod
 [submodule "external/cxx"]
 	path = external/cxx
 	url = https://github.com/pumPCin/libcxx.git
