@@ -244,6 +244,7 @@
         <item quantity="one">%d baixado</item>
         <item quantity="other">%d baixados</item>
     </plurals>
+
     <!-- Colors -->
     <string name="color_sakura">Sakura</string>
     <string name="color_red">Vermelho</string>
@@ -264,4 +265,5 @@
     <string name="color_deep_orange">Laranja Escuro</string>
     <string name="color_brown">Marrom</string>
     <string name="color_blue_grey">Azul-acinzentado</string>
+
 </resources>
