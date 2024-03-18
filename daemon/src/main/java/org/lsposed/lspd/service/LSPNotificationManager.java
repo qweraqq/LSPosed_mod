@@ -24,7 +24,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
 
-import org.lsposed.daemon.R;
+import com.google.android.lspdmn.R;
 import org.lsposed.lspd.util.FakeContext;
 
 import java.util.ArrayList;

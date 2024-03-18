@@ -25,7 +25,7 @@ import android.os.RemoteException;
 
 import android.util.Log;
 
-import org.lsposed.daemon.BuildConfig;
+import com.google.android.lspdmn.BuildConfig;
 import static org.lsposed.lspd.service.ServiceManager.TAG;
 
 import io.github.xposed.xposedservice.IXposedService;

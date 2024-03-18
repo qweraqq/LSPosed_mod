@@ -48,7 +48,7 @@ import android.view.IWindowManager;
 
 import androidx.annotation.NonNull;
 
-import org.lsposed.daemon.BuildConfig;
+import com.google.android.lspdmn.BuildConfig;
 import org.lsposed.lspd.ILSPManagerService;
 import org.lsposed.lspd.models.Application;
 import org.lsposed.lspd.models.UserInfo;

@@ -44,7 +44,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "org.lsposed.daemon"
+        applicationId = "com.google.android.lspdmn"
 
         buildConfigField("int", "API_CODE", "$apiCode")
         buildConfigField(
@@ -77,7 +77,7 @@ android {
         }
     }
 
-    namespace = "org.lsposed.daemon"
+    namespace = "com.google.android.lspdmn"
 }
 
 android.applicationVariants.all {

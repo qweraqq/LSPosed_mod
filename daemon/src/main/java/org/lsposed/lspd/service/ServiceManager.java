@@ -38,7 +38,7 @@ import androidx.annotation.RequiresApi;
 
 import com.android.internal.os.BinderInternal;
 
-import org.lsposed.daemon.BuildConfig;
+import com.google.android.lspdmn.BuildConfig;
 
 import java.io.File;
 import java.lang.reflect.Field;
@@ -148,7 +148,7 @@ public class ServiceManager {
 
         ActivityThread.systemMain();
 
-        DdmHandleAppName.setAppName("org.lsposed.daemon", 0);
+        DdmHandleAppName.setAppName("com.google.android.lspdmn", 0);
 
         waitSystemService("package");
         waitSystemService("activity");
