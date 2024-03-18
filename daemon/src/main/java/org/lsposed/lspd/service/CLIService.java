@@ -38,8 +38,8 @@ import android.os.ParcelFileDescriptor;
 import android.os.RemoteException;
 import android.util.Log;
 
-import org.lsposed.daemon.BuildConfig;
-import org.lsposed.daemon.R;
+import com.google.android.lspdmn.BuildConfig;
+import com.google.android.lspdmn.R;
 import org.lsposed.lspd.ICLIService;
 import org.lsposed.lspd.models.Application;
 import org.lsposed.lspd.util.FakeContext;

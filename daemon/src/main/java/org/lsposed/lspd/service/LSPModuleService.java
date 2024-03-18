@@ -32,7 +32,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import org.lsposed.daemon.BuildConfig;
+import com.google.android.lspdmn.BuildConfig;
 import org.lsposed.lspd.models.Module;
 
 import java.io.IOException;

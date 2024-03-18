@@ -91,7 +91,7 @@ public class ParasiticManagerHooker {
 
     private static void sendBinderToManager(final ClassLoader classLoader, IBinder binder) {
         try {
-            var clazz = XposedHelpers.findClass("org.lsposed.manager.Constants", classLoader);
+            var clazz = XposedHelpers.findClass("com.google.android.lspmngr.Constants", classLoader);
             var ok = (boolean) XposedHelpers.callStaticMethod(clazz, "setBinder",
                     new Class[]{IBinder.class}, binder);
             if (ok) return;
@@ -149,7 +149,7 @@ public class ParasiticManagerHooker {
                         var pkgInfo = getManagerPkgInfo(aInfo.applicationInfo);
                         if (pkgInfo == null) return;
                         for (var activity : pkgInfo.activities) {
-                            if ("org.lsposed.manager.ui.activity.MainActivity".equals(activity.name)) {
+                            if ("com.google.android.lspmngr.ui.activity.MainActivity".equals(activity.name)) {
                                 activity.applicationInfo = pkgInfo.applicationInfo;
                                 param.args[i] = activity;
                             }
@@ -158,7 +158,7 @@ public class ParasiticManagerHooker {
                     if (param.args[i] instanceof Intent) {
                         var intent = (Intent) param.args[i];
                         checkIntent(managerService, intent);
-                        intent.setComponent(new ComponentName(intent.getComponent().getPackageName(), "org.lsposed.manager.ui.activity.MainActivity"));
+                        intent.setComponent(new ComponentName(intent.getComponent().getPackageName(), "com.google.android.lspmngr.ui.activity.MainActivity"));
                     }
                 }
                 if (param.method.getName().equals("scheduleLaunchActivity")) {
@@ -326,7 +326,7 @@ public class ParasiticManagerHooker {
     private static void checkIntent(ILSPManagerService managerService, Intent intent) {
         if (managerService == null) return;
         if (Process.myUid() != BuildConfig.MANAGER_INJECTED_UID) return;
-        if (intent.getCategories() == null || !intent.getCategories().contains("org.lsposed.manager.LAUNCH_MANAGER")) {
+        if (intent.getCategories() == null || !intent.getCategories().contains("com.google.android.lspmngr.LAUNCH_MANAGER")) {
             Hookers.logD("Launching the original app, restarting");
             try {
                 managerService.restartFor(intent);

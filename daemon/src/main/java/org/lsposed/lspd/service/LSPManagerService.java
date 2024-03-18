@@ -48,7 +48,7 @@ import android.view.IWindowManager;
 
 import androidx.annotation.NonNull;
 
-import org.lsposed.daemon.BuildConfig;
+import com.google.android.lspdmn.BuildConfig;
 import org.lsposed.lspd.ILSPManagerService;
 import org.lsposed.lspd.models.Application;
 import org.lsposed.lspd.models.UserInfo;
@@ -148,7 +148,7 @@ public class LSPManagerService extends ILSPManagerService.Stub {
             }
             if (intent != null) {
                 if (intent.getCategories() != null) intent.getCategories().clear();
-                intent.addCategory("org.lsposed.manager.LAUNCH_MANAGER");
+                intent.addCategory("com.google.android.lspmngr.LAUNCH_MANAGER");
                 intent.setPackage(BuildConfig.MANAGER_INJECTED_PKG_NAME);
                 managerIntent = new Intent(intent);
             }
@@ -168,7 +168,7 @@ public class LSPManagerService extends ILSPManagerService.Stub {
 
     @SuppressLint("WrongConstant")
     public static void broadcastIntent(Intent inIntent) {
-        var intent = new Intent("org.lsposed.manager.NOTIFICATION");
+        var intent = new Intent("com.google.android.lspmngr.NOTIFICATION");
         intent.putExtra(Intent.EXTRA_INTENT, inIntent);
         intent.addFlags(0x01000000); //Intent.FLAG_RECEIVER_INCLUDE_BACKGROUND
         intent.addFlags(0x00400000); //Intent.FLAG_RECEIVER_FROM_SHELL
@@ -242,7 +242,7 @@ public class LSPManagerService extends ILSPManagerService.Stub {
             Log.d(TAG, "starting target app of parasitic manager");
             // check if it's launching our manager
             if (intent.getCategories() != null &&
-                    intent.getCategories().contains("org.lsposed.manager.LAUNCH_MANAGER")) {
+                    intent.getCategories().contains("com.google.android.lspmngr.LAUNCH_MANAGER")) {
                 Log.d(TAG, "requesting launch of manager");
                 // a new launch for the manager
                 // check if there's one running
