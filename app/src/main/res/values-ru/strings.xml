@@ -216,7 +216,7 @@
     <string name="pref_title_restrict_classloader">Только classloader модуля может использовать Xposed API</string>
     <string name="pref_summary_restrict_classloader">Это может нарушить работу некоторых модулей, но повысит безопасность (экспериментально)</string>
     <string name="settings_group_cli">CLI</string>
-    <string name="pref_title_enable_cli">Включить CLI</string>
+    <string name="pref_title_enable_cli">Включить командную строку</string>
     <string name="pref_summary_enable_cli">(экспериментально)</string>
     <string name="timeout_session">Время сессии в минутах</string>
     <string name="one_command">Одна команда</string>
