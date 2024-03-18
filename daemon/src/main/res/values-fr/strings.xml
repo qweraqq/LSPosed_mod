@@ -15,6 +15,8 @@
     <string name="xposed_module_request_scope_title">Demande d’Extension de Portée</string>
     <string name="xposed_module_request_scope_content">%1$s sur l’utilisateur %2$s demande d’ajouter %3$s à son périmètre d’action.</string>
     <string name="scope_channel_name">Demande d’Extension de Portée</string>
+    <!-- PIN Notification -->
+    <string name="pin_request_notification_title">PIN Code requested</string>
     <string name="scope_approve">Approuver</string>
     <string name="scope_deny">Refuser</string>
     <string name="nerver_ask_again">Ne jamais demander</string>
