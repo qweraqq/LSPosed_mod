@@ -5,7 +5,7 @@
 [submodule "external/lsplant"]
 	path = external/lsplant
 	url = https://github.com/pumPCin/LSPlant.git
-	branch = LSPosed_mod
+	branch = main
 [submodule "external/dobby"]
 	path = external/dobby
 	url = https://github.com/pumPCin/Dobby.git
