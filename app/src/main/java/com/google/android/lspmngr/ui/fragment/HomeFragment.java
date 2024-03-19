@@ -79,7 +79,7 @@ public class HomeFragment extends BaseFragment implements MenuProvider {
             return true;
         });
         menu.findItem(R.id.menu_issue).setOnMenuItemClickListener(v -> {
-            NavUtil.startURL(requireActivity(), "https://github.com/mywalkb/LSPosed_mod/issues/new/choose");
+            NavUtil.startURL(requireActivity(), "https://github.com/pumPCin/LSPosed_mod/issues/new/choose");
             return true;
         });
     }
@@ -296,7 +296,7 @@ public class HomeFragment extends BaseFragment implements MenuProvider {
             binding.designAboutInfo.setTransformationMethod(new LinkTransformationMethod(requireActivity()));
             binding.designAboutInfo.setText(HtmlCompat.fromHtml(getString(
                     R.string.about_view_source_code,
-                    "<b><a href=\"https://github.com/mywalkb/LSPosed_mod\">GitHub</a></b>",
+                    "<b><a href=\"https://github.com/pumPCin/LSPosed_mod\">GitHub</a></b>",
                     "<b></b>"), HtmlCompat.FROM_HTML_MODE_LEGACY));
             binding.designAboutVersion.setText(String.format(LocaleDelegate.getDefaultLocale(), "%s (%d)", BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE));
             return new BlurBehindDialogBuilder(requireContext())
