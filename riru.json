@@ -1,5 +1,6 @@
 {
 	"version": "v1.9.3",
 	"versionCode": 7400,
-	"zipUrl": "https://github.com/pumPCin/LSPosed_mod/releases/download/1.9.3-7400/LSPosed-v1.9.3-7400-riru-release.zip"
+	"zipUrl": "https://github.com/pumPCin/LSPosed_mod/releases/download/1.9.3-7400/LSPosed-v1.9.3-7400-riru-release.zip",
+	"changelog": "https://lsposed.github.io/LSPosed/release/changelog.md"
 }
