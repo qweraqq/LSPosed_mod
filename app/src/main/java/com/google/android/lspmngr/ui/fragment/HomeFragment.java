@@ -111,21 +111,21 @@ public class HomeFragment extends BaseFragment implements MenuProvider {
 
     private void updateStates(Activity activity, boolean binderAlive, boolean needUpdate) {
         if (binderAlive) {
-            //if (needUpdate) {
-                //binding.updateTitle.setText(R.string.need_update);
-                //binding.updateSummary.setText(getString(R.string.please_update_summary));
-                //binding.statusIcon.setImageResource(R.drawable.ic_round_update_24);
-                //binding.updateBtn.setOnClickListener(v -> {
-                    //if (UpdateUtil.canInstall()) {
-                        //new FlashDialogBuilder(activity, null).show();
-                    //} else {
-                        //NavUtil.startURL(activity, getString(R.string.latest_url));
-                    //}
-                //});
-                //binding.updateCard.setVisibility(View.VISIBLE);
-            //} else {
+            if (needUpdate) {
+                binding.updateTitle.setText(R.string.need_update);
+                binding.updateSummary.setText(getString(R.string.please_update_summary));
+                binding.statusIcon.setImageResource(R.drawable.ic_round_update_24);
+                binding.updateBtn.setOnClickListener(v -> {
+                    if (UpdateUtil.canInstall()) {
+                        new FlashDialogBuilder(activity, null).show();
+                    } else {
+                        NavUtil.startURL(activity, getString(R.string.latest_url));
+                    }
+                });
+                binding.updateCard.setVisibility(View.VISIBLE);
+            } else {
                 binding.updateCard.setVisibility(View.GONE);
-            //}
+            }
             boolean dex2oatAbnormal = ConfigManager.getDex2OatWrapperCompatibility() != ILSPManagerService.DEX2OAT_OK && !ConfigManager.dex2oatFlagsLoaded();
             var sepolicyAbnormal = !ConfigManager.isSepolicyLoaded();
             var systemServerAbnormal = !ConfigManager.systemServerRequested();

@@ -108,7 +108,7 @@ public class UpdateUtil {
 
     public static boolean needUpdate() {
         var pref = App.getPreferences();
-        if (!pref.getBoolean("checked", false)) return false;
+        return false; //if (!pref.getBoolean("checked", false)) return false;
         var now = Instant.now();
         var buildTime = Instant.ofEpochSecond(BuildConfig.BUILD_TIME);
         var check = pref.getLong("latest_check", 0);
