@@ -106,9 +106,9 @@ public class ActivityController extends IActivityController.Stub {
                             boolean alwaysContinue = false;
                             boolean alwaysKill = false;
                             while ((opt = getNextOption()) != null) {
-                                if (opt.equals("--gdb")) {
+                                if ("--gdb".equals(opt)) {
                                     gdbPort = getNextArgRequired();
-                                } else if (opt.equals("-m")) {
+                                } else if ("-m".equals(opt)) {
                                     monkey = true;
                                 } else if (myActivityControllerConstructor.getParameterCount() == 8) {
                                     switch (opt) {
@@ -176,7 +176,7 @@ public class ActivityController extends IActivityController.Stub {
     static private int replaceMyControllerActivity(PrintWriter pw, InputStream stream, String gdbPort, boolean monkey, boolean simpleMode, String target, boolean alwaysContinue, boolean alwaysKill) {
         try {
             InvocationHandler handler = (proxy, method, args1) -> {
-                if (method.getName().equals("setActivityController")) {
+                if ("setActivityController".equals(method.getName())) {
                     try {
                         args1[0] = replaceActivityController((IActivityController) args1[0]);
                     } catch (Throwable e) {

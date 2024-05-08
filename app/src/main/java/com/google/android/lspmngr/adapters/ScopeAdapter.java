@@ -164,7 +164,7 @@ public class ScopeAdapter extends EmptyStateRecyclerView.EmptyStateAdapter<Scope
     }
 
     private boolean shouldHideApp(PackageInfo info, ApplicationWithEquals app, HashSet<ApplicationWithEquals> tmpChkList) {
-        if (info.packageName.equals("system")) {
+        if ("system".equals(info.packageName)) {
             return false;
         }
         if (tmpChkList.contains(app)) {
@@ -195,9 +195,9 @@ public class ScopeAdapter extends EmptyStateRecyclerView.EmptyStateAdapter<Scope
     private int sortApps(AppInfo x, AppInfo y) {
         Comparator<PackageInfo> comparator = AppHelper.getAppListComparator(preferences.getInt("list_sort", 0), pm);
         Comparator<AppInfo> frameworkComparator = (a, b) -> {
-            if (a.packageName.equals("system") == b.packageName.equals("system")) {
+            if ("system".equals(a.packageName) == "system".equals(b.packageName)) {
                 return comparator.compare(a.packageInfo, b.packageInfo);
-            } else if (a.packageName.equals("system")) {
+            } else if ("system".equals(a.packageName)) {
                 return -1;
             } else {
                 return 1;
@@ -295,7 +295,7 @@ public class ScopeAdapter extends EmptyStateRecyclerView.EmptyStateAdapter<Scope
         } else if (itemId == R.id.select_all) {
             var tmpChkList = new HashSet<ApplicationWithEquals>(ConfigManager.getModuleScope(module.packageName));
             for (AppInfo info : searchList) {
-                if (info.packageName.equals("android")) {
+                if ("android".equals(info.packageName)) {
                     fragment.showHint(R.string.reboot_required, true, R.string.reboot, v -> ConfigManager.reboot());
                 }
                 tmpChkList.add(info.application);
@@ -305,7 +305,7 @@ public class ScopeAdapter extends EmptyStateRecyclerView.EmptyStateAdapter<Scope
             var tmpChkList = new HashSet<ApplicationWithEquals>(ConfigManager.getModuleScope(module.packageName));
 
             for (AppInfo info : searchList) {
-                if (tmpChkList.remove(info.application) && info.packageName.equals("android")) {
+                if (tmpChkList.remove(info.application) && "android".equals(info.packageName)) {
                     fragment.showHint(R.string.reboot_required, true, R.string.reboot, v -> ConfigManager.reboot());
                 }
             }
@@ -341,7 +341,7 @@ public class ScopeAdapter extends EmptyStateRecyclerView.EmptyStateAdapter<Scope
         } else if (itemId == R.id.menu_app_info) {
             ConfigManager.startActivityAsUserWithFeature(new Intent(ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", info.packageName, null)), module.userId);
         } else if (itemId == R.id.menu_force_stop) {
-            if (info.packageName.equals("system")) {
+            if ("system".equals(info.packageName)) {
                 new BlurBehindDialogBuilder(activity, R.style.ThemeOverlay_MaterialAlertDialog_Centered_FullWidthButtons)
                         .setTitle(R.string.reboot)
                         .setPositiveButton(android.R.string.ok, (dialog, which) -> ConfigManager.reboot())
@@ -408,7 +408,7 @@ public class ScopeAdapter extends EmptyStateRecyclerView.EmptyStateAdapter<Scope
         AppInfo appInfo = showList.get(position);
         boolean deny = denyList.contains(appInfo.packageName);
         holder.root.setAlpha(!deny && enabled ? 1.0f : .5f);
-        boolean system = appInfo.packageName.equals("system");
+        boolean system = "system".equals(appInfo.packageName);
         CharSequence appName;
         int userId = appInfo.applicationInfo.uid / App.PER_USER_RANGE;
         appName = system ? activity.getString(R.string.android_framework) : appInfo.label;
@@ -538,7 +538,7 @@ public class ScopeAdapter extends EmptyStateRecyclerView.EmptyStateAdapter<Scope
             appList.parallelStream().forEach(info -> {
                 int userId = info.applicationInfo.uid / App.PER_USER_RANGE;
                 String packageName = info.packageName;
-                if (packageName.equals("system") && userId != 0 ||
+                if ("system".equals(packageName) && userId != 0 ||
                         packageName.equals(module.packageName) ||
                         packageName.equals(BuildConfig.APPLICATION_ID)) {
                     return;
@@ -603,7 +603,7 @@ public class ScopeAdapter extends EmptyStateRecyclerView.EmptyStateAdapter<Scope
                 tmpChkList.remove(appInfo.application);
             }
             buttonView.setChecked(!isChecked);
-        } else if (appInfo.packageName.equals("system")) {
+        } else if ("system".equals(appInfo.packageName)) {
             fragment.showHint(R.string.reboot_required, true, R.string.reboot, v -> ConfigManager.reboot());
         } else if (denyList.contains(appInfo.packageName)) {
             fragment.showHint(activity.getString(R.string.deny_list, appInfo.label), true);

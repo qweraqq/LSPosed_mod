@@ -161,7 +161,7 @@ public class ParasiticManagerHooker {
                         intent.setComponent(new ComponentName(intent.getComponent().getPackageName(), "com.google.android.lspmngr.ui.activity.MainActivity"));
                     }
                 }
-                if (param.method.getName().equals("scheduleLaunchActivity")) {
+                if ("scheduleLaunchActivity".equals(param.method.getName())) {
                     ActivityInfo aInfo = null;
                     var parameters = ((Method) param.method).getParameterTypes();
                     for (var i = 0; i < parameters.length; ++i) {

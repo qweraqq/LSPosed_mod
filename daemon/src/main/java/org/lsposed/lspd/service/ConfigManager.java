@@ -458,13 +458,13 @@ public class ConfigManager {
     private List<ProcessScope> getAssociatedProcesses(Application app) throws RemoteException {
         Pair<Set<String>, Integer> result = PackageService.fetchProcessesWithUid(app);
         List<ProcessScope> processes = new ArrayList<>();
-        if (app.packageName.equals("android")) {
+        if ("android".equals(app.packageName)) {
             // this is hardcoded for ResolverActivity
             processes.add(new ProcessScope("system:ui", Process.SYSTEM_UID));
         }
         for (String processName : result.first) {
             var uid = result.second;
-            if (uid == Process.SYSTEM_UID && processName.equals("system")) {
+            if (uid == Process.SYSTEM_UID && "system".equals(processName)) {
                 // code run in system_server
                 continue;
             }
@@ -588,7 +588,7 @@ public class ConfigManager {
             while (cursor.moveToNext()) {
                 String packageName = cursor.getString(pkgNameIdx);
                 String apkPath = cursor.getString(apkPathIdx);
-                if (packageName.equals("lspd")) continue;
+                if ("lspd".equals(packageName)) continue;
                 var module = new Module();
                 module.packageName = packageName;
                 module.apkPath = apkPath;
@@ -707,7 +707,7 @@ public class ConfigManager {
                 })) continue;
 
                 // system server always loads database
-                if (app.packageName.equals("system")) continue;
+                if ("system".equals(app.packageName)) continue;
 
                 try {
                     List<ProcessScope> processesScope = cachedProcessScope.computeIfAbsent(new Pair<>(app.packageName, app.userId), (k) -> {
@@ -783,7 +783,7 @@ public class ConfigManager {
 
     @Nullable
     public List<Application> getModuleScope(String packageName) {
-        if (packageName.equals("lspd")) return null;
+        if ("lspd".equals(packageName)) return null;
         try (Cursor cursor = db.query("scope INNER JOIN modules ON scope.mid = modules.mid", new String[]{"app_pkg_name", "user_id"},
                 "modules.module_pkg_name = ?", new String[]{packageName}, null, null, null)) {
             if (cursor == null) {
@@ -824,7 +824,7 @@ public class ConfigManager {
     }
 
     public boolean updateModuleApkPath(String packageName, String apkPath, boolean force) {
-        if (apkPath == null || packageName.equals("lspd")) return false;
+        if (apkPath == null || "lspd".equals(packageName)) return false;
         if (db.inTransaction()) {
             Log.w(TAG, "update module apk path should not be called inside transaction");
             return false;
@@ -854,7 +854,7 @@ public class ConfigManager {
 
     // Only be called before updating modules. No need to cache.
     private int getModuleId(String packageName) {
-        if (packageName.equals("lspd")) return -1;
+        if ("lspd".equals(packageName)) return -1;
         if (db.inTransaction()) {
             Log.w(TAG, "get module id should not be called inside transaction");
             return -1;
@@ -875,7 +875,7 @@ public class ConfigManager {
         executeInTransaction(() -> {
             db.delete("scope", "mid = ?", new String[]{String.valueOf(mid)});
             for (Application app : scopes) {
-                if (app.packageName.equals("system") && app.userId != 0) continue;
+                if ("system".equals(app.packageName) && app.userId != 0) continue;
                 ContentValues values = new ContentValues();
                 values.put("mid", mid);
                 values.put("app_pkg_name", app.packageName);
@@ -892,7 +892,7 @@ public class ConfigManager {
         if (scopePackageName == null) return false;
         int mid = getModuleId(packageName);
         if (mid == -1) return false;
-        if (scopePackageName.equals("system") && userId != 0) return false;
+        if ("system".equals(scopePackageName) && userId != 0) return false;
         executeInTransaction(() -> {
             ContentValues values = new ContentValues();
             values.put("mid", mid);
@@ -909,7 +909,7 @@ public class ConfigManager {
         if (scopePackageName == null) return false;
         int mid = getModuleId(packageName);
         if (mid == -1) return false;
-        if (scopePackageName.equals("system") && userId != 0) return false;
+        if ("system".equals(scopePackageName) && userId != 0) return false;
         executeInTransaction(() -> {
             db.delete("scope", "mid = ? AND app_pkg_name = ? AND user_id = ?", new String[]{String.valueOf(mid), scopePackageName, String.valueOf(userId)});
         });
@@ -936,7 +936,7 @@ public class ConfigManager {
     }
 
     private boolean removeModuleWithoutCache(String packageName) {
-        if (packageName.equals("lspd")) return false;
+        if ("lspd".equals(packageName)) return false;
         boolean res = executeInTransaction(() -> db.delete("modules", "module_pkg_name = ?", new String[]{packageName}) > 0);
         try {
             for (var user : UserService.getUsers()) {
@@ -949,7 +949,7 @@ public class ConfigManager {
     }
 
     private boolean removeModuleScopeWithoutCache(Application module) {
-        if (module.packageName.equals("lspd")) return false;
+        if ("lspd".equals(module.packageName)) return false;
         int mid = getModuleId(module.packageName);
         if (mid == -1) return false;
         boolean res = executeInTransaction(() -> db.delete("scope", "mid = ? and user_id = ?", new String[]{String.valueOf(mid), String.valueOf(module.userId)}) > 0);
@@ -967,7 +967,7 @@ public class ConfigManager {
     }
 
     public boolean disableModule(String packageName) {
-        if (packageName.equals("lspd")) return false;
+        if ("lspd".equals(packageName)) return false;
         boolean changed = executeInTransaction(() -> {
             ContentValues values = new ContentValues();
             values.put("enabled", 0);
@@ -983,7 +983,7 @@ public class ConfigManager {
     }
 
     public boolean enableModule(String packageName) throws RemoteException {
-        if (packageName.equals("lspd")) return false;
+        if ("lspd".equals(packageName)) return false;
         PackageInfo pkgInfo = PackageService.getPackageInfoFromAllUsers(packageName, PackageService.MATCH_ALL_FLAGS).values().stream().findFirst().orElse(null);
         if (pkgInfo == null || pkgInfo.applicationInfo == null) return false;
         var modulePath = getModuleApkPath(pkgInfo.applicationInfo);
@@ -1223,7 +1223,7 @@ public class ConfigManager {
 
     public List<String> getDenyListPackages() {
         List<String> result = new ArrayList<>();
-        if (!getApi().equals("Zygisk")) return result;
+        if (!"Zygisk".equals(getApi())) return result;
         if (!ConfigFileManager.magiskDbPath.exists()) return result;
         try (final SQLiteDatabase magiskDb =
                      SQLiteDatabase.openDatabase(ConfigFileManager.magiskDbPath, new SQLiteDatabase.OpenParams.Builder().addOpenFlags(SQLiteDatabase.OPEN_READONLY).build())) {
@@ -1309,7 +1309,7 @@ public class ConfigManager {
             HashSet<String> result = new HashSet<>();
             while (cursor.moveToNext()) {
                 var pkgName = cursor.getString(modulePkgNameIdx);
-                if (pkgName.equals("lspd")) continue;
+                if ("lspd".equals(pkgName)) continue;
                 result.add(pkgName);
             }
             return result.toArray(new String[0]);

@@ -51,7 +51,7 @@ public class LoadedApkCtorHooker implements XposedInterface.Hooker {
                 XResources.setPackageNameForResDir(packageName, loadedApk.getResDir());
             }
 
-            if (packageName.equals("android")) {
+            if ("android".equals(packageName)) {
                 if (XposedInit.startsSystemServer) {
                     Hookers.logD("LoadedApk#<init> is android, skip: " + mAppDir);
                     return;

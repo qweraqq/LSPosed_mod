@@ -20,7 +20,7 @@ import io.github.libxposed.api.errors.HookFailedError;
 
 public class LSPosedBridge {
 
-    private static final String TAG = "LSPosed-Bridge";
+    private static final String TAG = "LSPsd-Bridge";
 
     private static final String castException = "Return value's type from hook callback does not match the hooked method";
 
@@ -215,7 +215,7 @@ public class LSPosedBridge {
             throw new IllegalArgumentException("Cannot hook abstract methods: " + hookMethod);
         } else if (hookMethod.getDeclaringClass().getClassLoader() == LSPosedContext.class.getClassLoader()) {
             throw new IllegalArgumentException("Do not allow hooking inner methods");
-        } else if (hookMethod.getDeclaringClass() == Method.class && hookMethod.getName().equals("invoke")) {
+        } else if (hookMethod.getDeclaringClass() == Method.class && "invoke".equals(hookMethod.getName())) {
             throw new IllegalArgumentException("Cannot hook Method.invoke");
         } else if (hooker == null) {
             throw new IllegalArgumentException("hooker should not be null!");

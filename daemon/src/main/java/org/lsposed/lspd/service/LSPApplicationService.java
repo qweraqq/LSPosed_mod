@@ -118,7 +118,7 @@ public class LSPApplicationService extends ILSPApplicationService.Stub {
 
     private List<Module> getAllModulesList() throws RemoteException {
         var processInfo = ensureRegistered();
-        if (processInfo.uid == Process.SYSTEM_UID && processInfo.processName.equals("system")) {
+        if (processInfo.uid == Process.SYSTEM_UID && "system".equals(processInfo.processName)) {
             return ConfigManager.getInstance().getModulesForSystemServer();
         }
         if (ServiceManager.getManagerService().isRunningManager(processInfo.pid, processInfo.uid))

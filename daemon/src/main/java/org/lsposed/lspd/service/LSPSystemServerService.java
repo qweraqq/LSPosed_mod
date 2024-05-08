@@ -56,7 +56,7 @@ public class LSPSystemServerService extends ILSPSystemServerService.Stub impleme
                 @Override
                 public void onRegistration(String name, IBinder binder) {
                     Log.d(TAG, "LSPSystemServerService::LSPSystemServerService onRegistration: " + name + " " + binder);
-                    if (name.equals(PROXY_SERVICE_NAME) && binder != null && binder != LSPSystemServerService.this) {
+                    if (PROXY_SERVICE_NAME.equals(name) && binder != null && binder != LSPSystemServerService.this) {
                         Log.d(TAG, "Register " + name + " " + binder);
                         originService = binder;
                         LSPSystemServerService.this.linkToDeath();

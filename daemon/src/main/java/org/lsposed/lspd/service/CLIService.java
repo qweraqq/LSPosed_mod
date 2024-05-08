@@ -198,7 +198,7 @@ public class CLIService extends ICLIService.Stub {
 
     public static boolean applicationStageNameValid(int pid, String processName) {
         var infoArr = processName.split(":");
-        if (infoArr.length != 2 || !infoArr[0].equals("lsp-cli")) {
+        if (infoArr.length != 2 || !"lsp-cli".equals(infoArr[0])) {
             return false;
         }
 

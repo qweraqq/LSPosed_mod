@@ -294,7 +294,7 @@ class SetScopeCommand implements Callable<Integer> {
 
         for(var scope : scopes) {
             if (Utils.validPackageNameAndUserId(manager, scope.packageName, scope.userId)) {
-                if (scope.packageName.equals("android")) {
+                if ("android".equals(scope.packageName)) {
                     bMsgReboot = true;
                 }
             } else if (!bIgnore) {

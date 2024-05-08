@@ -62,7 +62,7 @@ public final class XposedBridge {
     /**
      * @hide
      */
-    public static final String TAG = "LSPosed-Bridge";
+    public static final String TAG = "LSPsd-Bridge";
 
     /**
      * @deprecated Use {@link #getXposedVersion()} instead.
@@ -199,7 +199,7 @@ public final class XposedBridge {
             throw new IllegalArgumentException("Cannot hook abstract methods: " + hookMethod);
         } else if (hookMethod.getDeclaringClass().getClassLoader() == XposedBridge.class.getClassLoader()) {
             throw new IllegalArgumentException("Do not allow hooking inner methods");
-        } else if (hookMethod.getDeclaringClass() == Method.class && hookMethod.getName().equals("invoke")) {
+        } else if (hookMethod.getDeclaringClass() == Method.class && "invoke".equals(hookMethod.getName())) {
             throw new IllegalArgumentException("Cannot hook Method.invoke");
         }
 

@@ -25,7 +25,7 @@
 #include <errno.h>
 
 #ifndef LOG_TAG
-#define LOG_TAG    "LSPosed"
+#define LOG_TAG    "LSPlog"
 #endif
 
 #define LOGD(...) 0

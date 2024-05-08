@@ -95,7 +95,7 @@ public class LoadedApkCreateCLHooker implements XposedInterface.Hooker {
             if (!isFirstPackage) {
                 packageName = loadedApk.getPackageName();
                 processName = ActivityThread.currentPackageName();
-            } else if (packageName.equals("android")) {
+            } else if ("android".equals(packageName)) {
                 packageName = "system";
             }
 
@@ -135,7 +135,7 @@ public class LoadedApkCreateCLHooker implements XposedInterface.Hooker {
                 XposedHelpers.findAndHookMethod("android.app.Activity", lpparam.classLoader, "getSystemService", String.class, new XC_MethodHook() {
                     @Override
                     protected void afterHookedMethod(MethodHookParam param) {
-                        if (((String)param.args[0]).equals("LSPosed")) {
+                        if ("LSPosed".equals((String)param.args[0])) {
                             param.setResult(moduleBinder);
                         }
                     }

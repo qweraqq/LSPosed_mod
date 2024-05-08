@@ -118,7 +118,7 @@ public class MainActivity extends BaseActivity implements RepoLoader.RepoListene
         }
         NavController navController = navHostFragment.getNavController();
         var nav = (NavigationBarView) binding.nav;
-        if (intent.getAction() != null && intent.getAction().equals("android.intent.action.APPLICATION_PREFERENCES")) {
+        if (intent.getAction() != null && "android.intent.action.APPLICATION_PREFERENCES".equals(intent.getAction())) {
             nav.setSelectedItemId(R.id.settings_fragment);
         } else if (ConfigManager.isBinderAlive()) {
             if (!TextUtils.isEmpty(intent.getDataString())) {

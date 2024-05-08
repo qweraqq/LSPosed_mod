@@ -53,7 +53,7 @@ import java.util.concurrent.Executors;
 import hidden.HiddenApiBridge;
 
 public class ServiceManager {
-    public static final String TAG = "LSPosedService";
+    public static final String TAG = "LSPsdService";
     private static final ConcurrentHashMap<String, LSPLegacyModuleService> moduleServices = new ConcurrentHashMap<>();
     private static final File globalNamespace = new File("/proc/1/root");
     @SuppressWarnings("FieldCanBeLocal")
@@ -98,8 +98,8 @@ public class ServiceManager {
 
         int systemServerMaxRetry = 1;
         for (String arg : args) {
-            if (arg.equals("--from-service")) {
-                Log.w(TAG, "LSPosed daemon is not started properly. Try for a late start...");
+            if ("--from-service".equals(arg)) {
+                Log.w(TAG, "LSPsd daemon is not started properly. Try for a late start...");
             } else if (arg.startsWith("--system-server-max-retry=")) {
                 try {
                     systemServerMaxRetry = Integer.parseInt(arg.substring(arg.lastIndexOf('=') + 1));
@@ -284,7 +284,7 @@ public class ServiceManager {
                 }
             }
             // getSplitPermissions
-            if (reply != null && mName.equals("permissionmgr"))
+            if (reply != null && "permissionmgr".equals(mName))
                 reply.writeTypedList(List.of());
             return true;
         }
