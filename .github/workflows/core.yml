@@ -35,18 +35,6 @@ jobs:
             echo ${{ secrets.KEY_STORE }} | base64 --decode > key.jks
           fi
 
-      - name: Checkout libxposed/api
-        uses: actions/checkout@v4
-        with:
-          repository: libxposed/api
-          path: libxposed/api
-
-      - name: Checkout libxposed/service
-        uses: actions/checkout@v4
-        with:
-          repository: libxposed/service
-          path: libxposed/service
-
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
