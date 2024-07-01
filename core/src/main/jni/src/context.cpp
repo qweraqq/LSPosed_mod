@@ -89,9 +89,15 @@ namespace lspd {
             }
             lsplant::MakeDexFileTrusted(env, cookie);
         }
+	// 似乎我们也用不到resource hook
         RegisterResourcesHook(env);
+
         RegisterHookBridge(env);
-        RegisterNativeAPI(env);
+
+	// 我们似乎不需要LSPosed支持native hook
+	// https://github.com/LSPosed/LSPosed/pull/108
+        // RegisterNativeAPI(env);
+
         RegisterDexParserBridge(env);
     }
 

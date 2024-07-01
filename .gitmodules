@@ -4,8 +4,8 @@
 	branch = main
 [submodule "external/lsplant"]
 	path = external/lsplant
-	url = https://github.com/pumPCin/LSPlant.git
-	branch = main
+	url = https://github.com/qweraqq/LSPlant.git
+	branch = dev-20240701
 [submodule "external/dobby"]
 	path = external/dobby
 	url = https://github.com/pumPCin/Dobby.git
