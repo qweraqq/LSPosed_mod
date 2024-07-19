@@ -63,7 +63,7 @@ public class LogcatService implements Runnable {
         }
 
         getprop();
-        dmesg();
+        //dmesg();
     }
 
     private static void getprop() {
@@ -83,22 +83,22 @@ public class LogcatService implements Runnable {
     }
 
     private static void dmesg() {
-        try {
-            new ProcessBuilder("dmesg")
-                    .redirectOutput(ConfigFileManager.getKmsgPath())
-                    .start();
-        } catch (IOException e) {
-            Log.e(TAG, "dmesg: ", e);
-        }
+        //try {
+            //new ProcessBuilder("dmesg")
+                    //.redirectOutput(ConfigFileManager.getKmsgPath())
+                    //.start();
+        //} catch (IOException e) {
+            //Log.e(TAG, "dmesg: ", e);
+        //}
     }
 
     private native void runLogcat();
 
     @Override
     public void run() {
-        Log.i(TAG, "start running");
+        //Log.i(TAG, "start running");
         //runLogcat();
-        Log.i(TAG, "stopped");
+        //Log.i(TAG, "stopped");
     }
 
     @SuppressWarnings("unused")
@@ -163,15 +163,16 @@ public class LogcatService implements Runnable {
     }
 
     public void start() {
-        if (isRunning()) return;
-        thread = new Thread(this);
-        thread.setName("logcat");
-        thread.setUncaughtExceptionHandler((t, e) -> {
-            Log.e(TAG, "Crash unexpectedly: ", e);
-            thread = null;
-            start();
-        });
-        thread.start();
+        return;
+        //if (isRunning()) return;
+        //thread = new Thread(this);
+        //thread.setName("logcat");
+        //thread.setUncaughtExceptionHandler((t, e) -> {
+            //Log.e(TAG, "Crash unexpectedly: ", e);
+            //thread = null;
+            //start();
+        //});
+        //thread.start();
     }
 
     public void startVerbose() {
