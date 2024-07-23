@@ -54,6 +54,9 @@ jobs:
           restore-keys: ${{ runner.os }}
           save: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
 
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
       - name: Build dependencies
         working-directory: libxposed
         run: |

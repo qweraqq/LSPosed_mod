@@ -1,7 +1,12 @@
+-keep class android.** { *; }
 -keep class de.robv.android.xposed.** {*;}
 -keep class io.github.libxposed.** {*;}
+-keep class org.lsposed.lspd.core.* {*;}
+-keep class org.lsposed.lspd.impl.LSPosedBridge$NativeHooker {*;}
+-keep class org.lsposed.lspd.impl.LSPosedBridge$HookerCallback {*;}
+-keep class org.lsposed.lspd.util.Hookers {*;}
+
 -keepattributes RuntimeVisibleAnnotations
--keep class android.** { *; }
 -keepclasseswithmembers,includedescriptorclasses class * {
     native <methods>;
 }
